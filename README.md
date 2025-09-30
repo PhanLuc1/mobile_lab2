@@ -1,50 +1,44 @@
-# Welcome to your Expo app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# Geo-Notes (Ghi chú theo vị trí)
 
-## Get started
+## Mô tả
+Geo-Notes là ứng dụng ghi chú gắn với vị trí GPS, hiển thị các ghi chú trên bản đồ. Người dùng có thể check-in, xem các ghi chú gần mình, lọc theo bán kính, và mở Google Maps để dẫn đường.
 
-1. Install dependencies
+## Tính năng
+- Check-in: Tạo ghi chú gắn với vị trí hiện tại.
+- Danh sách ghi chú: Hiển thị các ghi chú, vị trí, và nút mở bản đồ.
+- Bản đồ: Hiển thị các điểm ghi chú trên bản đồ Leaflet.
+- Lọc ghi chú theo bán kính.
+- Dẫn đường bằng Google Maps.
 
+## Công nghệ sử dụng
+- React
+- Leaflet (bản đồ)
+- Capacitor Geolocation (lấy vị trí GPS trên mobile)
+- Tailwind CSS (giao diện)
+
+## Hướng dẫn cài đặt & chạy
+1. Cài đặt các package:
    ```bash
    npm install
+   npm install leaflet @capacitor/geolocation
+   npm install --save-dev @types/leaflet
    ```
-
-2. Start the app
-
+2. Chạy ứng dụng trên web:
    ```bash
-   npx expo start
+   npm run dev
+   ```
+3. Build và chạy trên Android (Ionic/Capacitor):
+   ```bash
+   npx cap sync
+   npx cap open android
+   # Build và chạy trên thiết bị/emulator
    ```
 
-In the output, you'll find options to open the app in a
+## Lưu ý khi chạy trên Android
+- Đảm bảo đã cấp quyền truy cập vị trí cho app.
+- Nếu bản đồ không hiển thị, hãy kiểm tra lại khởi tạo map và quyền truy cập.
+- Đã fix khởi tạo map cho Android bằng delay và cleanup.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Demo
+![alt text](Screenshot_20250929_184337.png)
