@@ -30,9 +30,9 @@ Geo-Notes là ứng dụng ghi chú gắn với vị trí GPS, hiển thị các
    ```
 3. Build và chạy trên Android (Ionic/Capacitor):
    ```bash
-   npx cap sync
-   npx cap open android
-   # Build và chạy trên thiết bị/emulator
+   npx run start
+   npx run start
+   Select i or o to run ios and androi
    ```
 
 ## Lưu ý khi chạy trên Android
